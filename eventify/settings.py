@@ -113,3 +113,10 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+DEFAULT_RENDERER_CLASSES = ['rest_framework.renderers.JSONRenderer']
+if DEBUG:
+    DEFAULT_RENDERER_CLASSES.append('rest_framework.renderers.BrowsableAPIRenderer')
+
+REST_FRAMEWORK = {'DEFAULT_RENDERER_CLASSES': DEFAULT_RENDERER_CLASSES}
