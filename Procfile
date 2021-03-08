@@ -1,0 +1,1 @@
+web: gunicorn eventify.wsgi --log-file -
