@@ -1,0 +1,15 @@
+Olá! Tudo bem?
+
+Muito obrigada por se inscrever no Eventify.
+
+Estes foram os dados que você nos forneceu
+em sua inscrição:
+
+Nome: {{ subscription.name }}
+CPF: {{ subscription.cpf }}
+Email: {{ subscription.email }}
+Telefone: {{ subscription.phone }}
+
+Atenciosamente,
+--
+Eventify
