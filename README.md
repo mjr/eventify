@@ -2,6 +2,8 @@
 
 API do sistema de eventos.
 
+[![Build Status](https://travis-ci.org/mjr/eventify.svg?branch=main)](https://travis-ci.org/mjr/eventify)
+
 ## Como desenvolver?
 
 1. Clone o repositório.
