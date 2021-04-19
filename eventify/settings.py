@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     # Apps project
     "eventify.api",
     "eventify.core",
-    "eventify.subscriptions.apps.SubscriptionsConfig",
+    "eventify.subscriptions",
     # Third party apps
     "rest_framework",
 ]
@@ -141,9 +141,10 @@ LOGGING = {
     },
 }
 
-sentry_init(
-    dsn=config("SENTRY_DSN_URL"),
-    integrations=[DjangoIntegration()],
-    traces_sample_rate=1.0,
-    send_default_pii=True,
-)
+if not DEBUG:
+    sentry_init(
+        dsn=config("SENTRY_DSN_URL"),
+        integrations=[DjangoIntegration()],
+        traces_sample_rate=1.0,
+        send_default_pii=True,
+    )

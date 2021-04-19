@@ -3,6 +3,7 @@
 API do sistema de eventos.
 
 [![Build Status](https://travis-ci.com/mjr/eventify.svg?branch=main)](https://travis-ci.com/mjr/eventify)
+[![Coverage Status](https://coveralls.io/repos/github/mjr/eventify/badge.svg?branch=main)](https://coveralls.io/github/mjr/eventify?branch=main)
 
 ## Como desenvolver?
 
