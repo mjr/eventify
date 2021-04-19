@@ -13,3 +13,8 @@ class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields = TalkSerializer.Meta.fields + ("slots",)
+
+
+class ScheduleSerializer(serializers.Serializer):
+    talks = TalkSerializer(many=True)
+    courses = CourseSerializer(many=True)

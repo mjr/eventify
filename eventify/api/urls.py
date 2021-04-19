@@ -2,7 +2,7 @@ from django.urls import path, include
 
 from rest_framework import routers
 
-from eventify.core.views import CourseViewSet, TalkViewSet
+from eventify.core.views import CourseViewSet, TalkViewSet, ScheduleView
 from eventify.subscriptions.views import SubscriptionViewSet
 
 
@@ -13,4 +13,5 @@ router.register(r'talks', TalkViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('schedule/', ScheduleView.as_view()),
 ]
