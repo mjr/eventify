@@ -2,7 +2,7 @@
 
 API do sistema de eventos.
 
-[![Build Status](https://travis-ci.org/mjr/eventify.svg?branch=main)](https://travis-ci.org/mjr/eventify)
+[![Build Status](https://travis-ci.com/mjr/eventify.svg?branch=main)](https://travis-ci.com/mjr/eventify)
 
 ## Como desenvolver?
 
