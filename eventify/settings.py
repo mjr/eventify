@@ -1,5 +1,6 @@
 from decouple import config, Csv
 from dj_database_url import parse as dburl
+from os import environ
 from pathlib import Path
 
 from sentry_sdk import init as sentry_init
@@ -19,9 +20,9 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", default=[], cast=Csv())
+ALLOWED_HOSTS = environ.get("DJANGO_ALLOWED_HOSTS", default="127.0.0.1").split(" ")
 
-ALLOWED_CIDR_NETS = config("ALLOWED_CIDR_NETS", default=[], cast=Csv())
+ALLOWED_CIDR_NETS = environ.get("ALLOWED_CIDR_NETS", default="10.99.0.0/16").split(" ")
 
 
 # Application definition
